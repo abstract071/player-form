@@ -4,10 +4,10 @@ import { shallow } from 'enzyme'
 import { List } from '../'
 
 
-describe( 'Form', () => {
-  const button = shallow( <List data={ {} } /> )
+describe( 'List', () => {
+  const list = shallow( <List data={ {} } /> )
 
   it( 'renders properly', () => {
-    expect( button ).toMatchSnapshot()
+    expect( list ).toMatchSnapshot()
   } )
 } )

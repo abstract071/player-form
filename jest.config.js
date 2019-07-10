@@ -5,11 +5,18 @@ module.exports = {
     'js',
     'jsx'
   ],
+  'moduleDirectories': [
+    'node_modules',
+    'src'
+  ],
+  'moduleNameMapper': {
+    '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules'
+  },
   'transform': {
     '^.+\\.(tsx?|jsx?)$': 'ts-jest'
   },
   'testMatch': [
     '**/?(*.)+(test).(ts?(x)|js?(x))'
   ],
-  'setupTestFrameworkScriptFile': '\'<rootDir>/setup.tests.ts\''
+  'setupFilesAfterEnv': ['<rootDir>/setup.tests.ts']
 }

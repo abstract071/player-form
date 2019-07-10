@@ -5,9 +5,13 @@ import { FormPlayer } from '../'
 
 
 describe( 'Form', () => {
-  const button = shallow( <FormPlayer /> )
+  const formPlayer = shallow(
+    <FormPlayer
+      fetchPlayerInfo={ jest.fn() }
+    />
+  )
 
   it( 'renders properly', () => {
-    expect( button ).toMatchSnapshot()
+    expect( formPlayer ).toMatchSnapshot()
   } )
 } )
