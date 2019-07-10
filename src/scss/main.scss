@@ -6,6 +6,15 @@ html, body {
   font-weight: 300;
 }
 
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+form {
+  max-width: 400px;
+  overflow: hidden;
+}
+
 :global( #root ) {
   height: 100%;
 }

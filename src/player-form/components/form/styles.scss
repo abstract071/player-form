@@ -1,3 +1,23 @@
-.bg {
-  background-color: fuchsia;
+.list {
+  list-style-type: none;
+
+  &.root {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background-color: blue;
+  color: white;
+  width: 100%;
+  height: 30px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  background: rgba(52,189,243,1);
+  background: linear-gradient(176deg, rgba(52,189,243,1) 0%, rgba(53,190,240,1) 50%, rgba(0,172,238,1) 51%, rgba(52,189,243,1) 71%, rgba(1,172,233,1) 100%);
 }

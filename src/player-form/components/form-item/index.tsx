@@ -8,20 +8,16 @@ import {
 import './styles.scss'
 
 
-interface IItemProps {
+interface IFormItemProps {
   level: number,
   value: any,
   label: string,
-  field?: any
-  fieldKey?: string,
+  field: any
+  name: string,
 }
 
-export class Item extends PureComponent<IItemProps> {
-  static defaultProps: {
-    value: ''
-  }
-
-  renderField( { fieldKey: key, value, field: Field }: any ) {
+export class FormItem extends PureComponent<IFormItemProps> {
+  renderField( { name: key, value, field: Field }: any ) {
     return (
       <Field
         name={ key }
@@ -36,7 +32,7 @@ export class Item extends PureComponent<IItemProps> {
       label,
       level,
       field,
-      fieldKey,
+      name,
       children
     } = this.props
 
@@ -52,7 +48,7 @@ export class Item extends PureComponent<IItemProps> {
           </div>
           {
             !children && field ?
-              <div>{ this.renderField( { fieldKey, value, field } ) }</div>
+              <div>{ this.renderField( { name, value, field } ) }</div>
               :
               children
           }
@@ -69,4 +65,4 @@ export class Item extends PureComponent<IItemProps> {
 }
 
 
-export default Item
+export default FormItem
