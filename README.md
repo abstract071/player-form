@@ -1,1 +1,1 @@
-# Please, run `npm start` in terminal to check it out
+# Please, run `npm install` and then `npm start` in terminal to check it out
